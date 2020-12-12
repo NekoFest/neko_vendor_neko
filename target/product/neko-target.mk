@@ -53,6 +53,9 @@ $(call inherit-product, vendor/neko/target/product/properties.mk)
 # Include SEPolicy makefile.
 $(call inherit-product, vendor/neko/sepolicy/sepolicy.mk)
 
+# Include textclassifier makefile
+$(call inherit-product, vendor/neko/target/product/textclassifier.mk)
+
 # Include GMS makefile.
 $(call inherit-product, vendor/gms/gms_full.mk)
 
