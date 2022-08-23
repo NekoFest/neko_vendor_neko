@@ -17,7 +17,9 @@
 $(call inherit-product, vendor/neko/target/product/version.mk)
 
 # Bootanimation
-$(call inherit-product, vendor/neko/bootanimation/bootanimation.mk)
+PRODUCT_PACKAGES += \
+    bootanimation-dark \
+    bootanimation-light
 
 # Don't dexpreopt prebuilts. (For GMS).
 DONT_DEXPREOPT_PREBUILTS := true
