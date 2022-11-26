@@ -1,4 +1,5 @@
 # Copyright (C) 2021 Paranoid Android
+# Copyright (C) 2022 NekoFest
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -20,7 +21,7 @@ DISABLE_EAP_PROXY := true
 include device/qcom/common/BoardConfigQcom.mk
 
 # Kernel configuration.
-include vendor/aospa/target/board/BoardConfigKernel.mk
+include vendor/neko/target/board/BoardConfigKernel.mk
 
 # Soong
-include vendor/aospa/target/board/BoardConfigSoong.mk
+include vendor/neko/target/board/BoardConfigSoong.mk

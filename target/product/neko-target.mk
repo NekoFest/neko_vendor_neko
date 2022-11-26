@@ -1,4 +1,5 @@
 # Copyright (C) 2022 Paranoid Android
+# Copyright (C) 2022 NekoFest
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,25 +13,25 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# AOSPA Versioning.
-$(call inherit-product, vendor/aospa/target/product/version.mk)
+# NekoFest Versioning.
+$(call inherit-product, vendor/neko/target/product/version.mk)
 
 # Bootanimation
-$(call inherit-product, vendor/aospa/bootanimation/bootanimation.mk)
+$(call inherit-product, vendor/neko/bootanimation/bootanimation.mk)
 
 # Don't dexpreopt prebuilts. (For GMS).
 DONT_DEXPREOPT_PREBUILTS := true
 
 # Fonts
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,vendor/aospa/prebuilts/fonts/,$(TARGET_COPY_OUT_PRODUCT)/fonts) \
-    vendor/aospa/target/config/fonts_customization.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/fonts_customization.xml
+    $(call find-copy-subdir-files,*,vendor/neko/prebuilts/fonts/,$(TARGET_COPY_OUT_PRODUCT)/fonts) \
+    vendor/neko/target/config/fonts_customization.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/fonts_customization.xml
 
 $(call inherit-product, external/google-fonts/lato/fonts.mk)
 
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
-     vendor/aospa/target/config/aospa_vendor_framework_compatibility_matrix.xml
+     vendor/neko/target/config/aospa_vendor_framework_compatibility_matrix.xml
 
 # Include Common Qualcomm Device Tree.
 $(call inherit-product, device/qcom/common/common.mk)
@@ -39,16 +40,16 @@ $(call inherit-product, device/qcom/common/common.mk)
 $(call inherit-product, vendor/qcom/sdclang/config/SnapdragonClang.mk)
 
 # Include Overlay makefile.
-$(call inherit-product, vendor/aospa/overlay/overlays.mk)
+$(call inherit-product, vendor/neko/overlay/overlays.mk)
 
 # Include Packages makefile.
-$(call inherit-product, vendor/aospa/target/product/packages.mk)
+$(call inherit-product, vendor/neko/target/product/packages.mk)
 
 # Include Properties makefile.
-$(call inherit-product, vendor/aospa/target/product/properties.mk)
+$(call inherit-product, vendor/neko/target/product/properties.mk)
 
 # Include SEPolicy makefile.
-$(call inherit-product, vendor/aospa/sepolicy/sepolicy.mk)
+$(call inherit-product, vendor/neko/sepolicy/sepolicy.mk)
 
 # Include GMS, Modules, and Pixel features.
 $(call inherit-product, vendor/google/gms/config.mk)
@@ -66,9 +67,9 @@ PRODUCT_VENDOR_MOVE_ENABLED := true
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.biometrics.face.xml \
-    vendor/aospa/target/config/permissions/default_permissions_com.google.android.deskclock.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/default-permissions/default_permissions_com.google.android.deskclock.xml \
-    vendor/aospa/target/config/permissions/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml \
-    vendor/aospa/target/config/permissions/lily_experience.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/lily_experience.xml
+    vendor/neko/target/config/permissions/default_permissions_com.google.android.deskclock.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/default-permissions/default_permissions_com.google.android.deskclock.xml \
+    vendor/neko/target/config/permissions/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml \
+    vendor/neko/target/config/permissions/lily_experience.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/lily_experience.xml
 
 # Pre-optimization
 PRODUCT_DEXPREOPT_SPEED_APPS += \
@@ -80,8 +81,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Sensitive phone numbers and APN configurations
 PRODUCT_COPY_FILES += \
-    vendor/aospa/target/config/apns-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml \
-    vendor/aospa/target/config/sensitive_pn.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sensitive_pn.xml
+    vendor/neko/target/config/apns-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml \
+    vendor/neko/target/config/sensitive_pn.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sensitive_pn.xml
 
 # Skip boot JAR checks.
 SKIP_BOOT_JARS_CHECK := true

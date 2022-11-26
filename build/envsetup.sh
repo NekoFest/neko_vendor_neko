@@ -1,6 +1,6 @@
-function __print_aospa_functions_help() {
+function __print_neko_functions_help() {
 cat <<EOF
-Additional Paranoid Android functions:
+Additional NekoFest functions:
 - clomerge:        Utility to merge CLO tags.
 - repopick:        Utility to fetch changes from Gerrit.
 - sort-blobs-list: Sort proprietary-files.txt sections with LC_ALL=C.
@@ -12,13 +12,13 @@ function clomerge()
     target_branch=$1
     set_stuff_for_environment
     T=$(gettop)
-    python3 $T/vendor/aospa/build/tools/merge-clo.py $target_branch
+    python3 $T/vendor/neko/build/tools/merge-clo.py $target_branch
 }
 
 function repopick()
 {
     T=$(gettop)
-    $T/vendor/aospa/build/tools/repopick.py $@
+    $T/vendor/neko/build/tools/repopick.py $@
 }
 
 function sort-blobs-list() {

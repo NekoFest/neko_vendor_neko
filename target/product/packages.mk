@@ -1,4 +1,5 @@
 # Copyright (C) 2016-2022 Paranoid Android
+# Copyright (C) 2022 NekoFest
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -44,14 +45,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     ParanoidPapers \
     ParanoidSense
-
-# Paranoid Packages (OTA)
-ifneq ($(filter RELEASE BETA,$(AOSPA_BUILDTYPE)),)
-PRODUCT_PACKAGES += ParanoidHub
-endif
-
-PRODUCT_PACKAGES += \
-    init.aospa-hub.rc
 
 # Paranoid ThemePicker
 PRODUCT_PACKAGES += \

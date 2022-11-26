@@ -57,5 +57,5 @@ PRODUCT_PACKAGES += \
     IconPackRoundedThemePickerOverlay \
     ParanoidLauncherOverlay
 
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/aospa/overlay/static
-PRODUCT_PACKAGE_OVERLAYS += vendor/aospa/overlay/static
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/neko/overlay/static
+PRODUCT_PACKAGE_OVERLAYS += vendor/neko/overlay/static
