@@ -26,4 +26,4 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.neko.version=$(NEKO_VERSION) \
     ro.neko.version_code=$(NEKO_VERSION_CODE) \
     ro.neko.build_time=$(NEKO_BUILD_DATE)-$(NEKO_BUILD_TIME) \
-    ro.codelinaro.tag=$(shell bash vendor/neko/clo-tag.sh)
+    ro.codelinaro.tag=$(CLO_REVISION_TAG)
