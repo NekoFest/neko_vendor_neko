@@ -54,7 +54,7 @@ $(call inherit-product, vendor/neko/target/product/properties.mk)
 $(call inherit-product, vendor/neko/sepolicy/sepolicy.mk)
 
 # Include GMS, Modules, and Pixel features.
-$(call inherit-product, vendor/google/gms/config.mk)
+$(call inherit-product, vendor/gms/gms_full.mk)
 $(call inherit-product, vendor/google/pixel/config.mk)
 
 ifneq ($(TARGET_FLATTEN_APEX), true)
