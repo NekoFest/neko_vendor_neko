@@ -59,11 +59,8 @@ $(call inherit-product, vendor/neko/target/product/textclassifier.mk)
 # Include GMS makefile.
 $(call inherit-product, vendor/gms/gms_full.mk)
 
-ifneq ($(TARGET_FLATTEN_APEX), true)
-$(call inherit-product-if-exists, vendor/google/modules/build/mainline_modules.mk)
-else
-$(call inherit-product-if-exists, vendor/google/modules/build/mainline_modules_flatten_apex.mk)
-endif
+# Include APEX makefile.
+$(call inherit-product, vendor/neko/target/product/apex.mk)
 
 # Overlays
 PRODUCT_PACKAGE_OVERLAYS += \
