@@ -15,7 +15,7 @@
 //
 
 runtime_resource_overlay {
-    name: "SettingsGoogleOverlayHentai",
+    name: "SettingsGoogleOverlayNeko",
     certificate: "platform",
     sdk_version: "current",
     product_specific: true

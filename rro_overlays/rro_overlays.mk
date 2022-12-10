@@ -14,11 +14,11 @@
 # limitations under the License.
 #
 
-# Hentai Overlays
+# NekoFest Overlays
 PRODUCT_PACKAGES += \
-    HentaiConfigOverlay \
-    PixelSetupWizardOverlayHentai \
-    SettingsGoogleOverlayHentai
+    NekoConfigOverlay \
+    PixelSetupWizardOverlayNeko \
+    SettingsGoogleOverlayNeko
 
 # Google Overlays
 PRODUCT_PACKAGES += \
