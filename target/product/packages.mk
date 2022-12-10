@@ -41,15 +41,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-rtti
 
-# Paranoid Packages
-PRODUCT_PACKAGES += \
-    ParanoidPapers \
-    ParanoidSense
-
-# Paranoid ThemePicker
-PRODUCT_PACKAGES += \
-    ParanoidThemePicker
-
 # Gestures
 PRODUCT_PACKAGES += \
     vendor.aospa.power-service
