@@ -40,7 +40,7 @@ $(call inherit-product, device/qcom/common/common.mk)
 $(call inherit-product, vendor/qcom/sdclang/config/SnapdragonClang.mk)
 
 # Include Overlay makefile.
-$(call inherit-product, vendor/neko/overlay/overlays.mk)
+$(call inherit-product, vendor/neko/rro_overlays/rro_overlays.mk)
 
 # Include Packages makefile.
 $(call inherit-product, vendor/neko/target/product/packages.mk)
@@ -60,6 +60,10 @@ $(call inherit-product-if-exists, vendor/google/modules/build/mainline_modules.m
 else
 $(call inherit-product-if-exists, vendor/google/modules/build/mainline_modules_flatten_apex.mk)
 endif
+
+# Overlays
+PRODUCT_PACKAGE_OVERLAYS += \
+    vendor/neko/overlay
 
 # Move Wi-Fi modules to vendor.
 PRODUCT_VENDOR_MOVE_ENABLED := true
