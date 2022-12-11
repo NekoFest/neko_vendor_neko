@@ -14,6 +14,9 @@
 # limitations under the License.
 #
 
+TARGET_SHIP_PREBUILT_APEX ?= false
+ifeq ($(TARGET_SHIP_PREBUILT_APEX),true)
+
 # Optional ART/BT/UWB/WIFI module
 MAINLINE_INCLUDE_ART_MODULE ?= true
 MAINLINE_INCLUDE_BT_MODULE ?= true
@@ -31,6 +34,10 @@ DISABLE_DEXPREOPT_CHECK := true
 # Enable Google Play system updates support
 PRODUCT_SOONG_NAMESPACES += \
     vendor/neko/apex
+
+# Apex Overlay
+PRODUCT_PACKAGES += \
+    ApexOverlay
 
 # ModuleMetadata
 PRODUCT_PACKAGES += \
@@ -82,3 +89,4 @@ PRODUCT_PACKAGES += \
 	com.google.android.tethering \
 	com.google.android.tzdata4 \
 	com.google.mainline.primary.libs
+endif
